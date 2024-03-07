@@ -6,5 +6,5 @@ def home(request):
   return HttpResponse("<h1>Hello Django!</h1>")
 
 def about(request):
-  return HttpResponse("<h1>About Page!</h1>")
+  return HttpResponse("<h1>About Page</h1>")
   
