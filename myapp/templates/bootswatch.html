@@ -1,15 +1,13 @@
 
-<!-- templates/bootswatch.html -->
+<!-- bootswatch.html -->
 {% extends 'base.html' %}
-{% load static %}
-{% block title %}{{ page_title }}{% endblock %}
-
+{% block title %}Funny Joke Page{% endblock %}
 {% block content %}
-<div class="container">
-    <div class="jumbotron">
-        <h1>{{ page_heading }}</h1>
-        <p>{{ page_content }}</p>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>{{ page_heading }}</h1>
+            <p>{{ page_content }}</p>
+        </div>
     </div>
-</div>
-<p><img src="{% static 'images/django-logo.png' %}" alt="Django Logo"></p>
+</p>
 {% endblock %}

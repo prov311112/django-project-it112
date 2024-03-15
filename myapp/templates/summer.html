@@ -1,19 +1,6 @@
-
-<!-- templates/bootswatch.html -->
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Funny Joke</title>
-</head>
-<body>
-    <h1>Here's a Funny Joke:</h1>
-    <p>{{ joke_text }}</p>
-</body>
-</html>
-
 {% load static %}
+
 {% block title %}{{ page_title }}{% endblock %}
 
 {% block content %}
@@ -22,5 +9,6 @@
         <h1>{{ page_heading }}</h1>
         <p>{{ page_content }}</p>
     </div>
+    <img src="{% static 'images/Ballet_cat0.png' %}" alt="Ballet Cat">
 </div>
 {% endblock %}

@@ -5,6 +5,8 @@ urlpatterns = [
   path("",views.home, name="home"),
   path("about/",views.about, name="about"),
   path("funny/",views.funny, name="funny"),  
+  path("summer/",views.summer, name="summer"),  # Corrected line
   path('function/', views.function_view, name='function_view'),
   path('class/', views.ClassView.as_view(), name='class_view'),
+  path('theme/', views.ThemeView.as_view(), name='theme'),
 ]
