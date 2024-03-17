@@ -1,12 +1,13 @@
 from django.urls import path
-from . import views
+from myapp.views import ClassView, FunnyView, LearningView, SummerView, ThemeView, function_view, home, index
 
 urlpatterns = [
-  path("",views.home, name="home"),
-  path("about/",views.about, name="about"),
-  path("funny/",views.funny, name="funny"),  
-  path("summer/",views.summer, name="summer"),  # Corrected line
-  path('function/', views.function_view, name='function_view'),
-  path('class/', views.ClassView.as_view(), name='class_view'),
-  path('theme/', views.ThemeView.as_view(), name='theme'),
+    path('', index, name='index'),
+    path('home/', home, name='home'),
+    path('funny/', FunnyView.as_view(), name='funny'),
+    path('learning/', LearningView.as_view(), name='learning'),
+    path('summer/', SummerView.as_view(), name='summer'),
+    path('function/', function_view, name='function_view'),
+    path('class/', ClassView.as_view(), name='class_view'),
+    path('theme/', ThemeView.as_view(), name='theme'),
 ]

@@ -1,14 +1,33 @@
-{% extends 'base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django Home Page</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Why is summer so amazing?</h1>
+    </header>
 
-{% block title %}{{ page_title }}{% endblock %}
 
-{% block content %}
-<div class="container">
-    <div class="jumbotron">
-        <h1>{{ page_heading }}</h1>
-        <p>{{ page_content }}</p>
-    </div>
-    <img src="{% static 'images/Ballet_cat0.png' %}" alt="Ballet Cat">
-</div>
-{% endblock %}
+  <main>
+      <section>
+          <h2> It brings special light and warmth to my life!</h2>
+          <p>Summer is a season that fills me with joy and energy. I could talk about it endlessly, as it brings a special light and warmth to my life.</p>
+          <p>Summer has a profound impact on my mental health, and it changes me for the better. With its bright and sunny days, it fills me with positivity, hope, and optimism. The warm weather and the long hours of daylight allow me to spend more time outside, enjoying nature and engaging in physical activities like swimming, hiking, or simply taking a walk. These activities not only help me stay fit and healthy but also boost my mood and reduce stress.</p>   
+
+          <p>Moreover, summer provides me with an opportunity to slow down, relax, and recharge my batteries. It allows me to take a break from the daily grind, spend quality time with my loved ones, and pursue my hobbies and passions. Whether it's reading a book on the beach, having a picnic in the park, or watching the sunset, summer helps me appreciate the simple things in life and find joy in the present moment. All in all, summer is a season that brings a positive change in my life, and I am grateful for its transformative power.</p>
+
+
+      </section>
+  </main>
+
+
+    <footer>
+        <p>© 2024 My Django Project</p>
+    </footer>
+</body>
+</html>
