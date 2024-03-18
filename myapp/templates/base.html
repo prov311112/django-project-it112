@@ -37,10 +37,19 @@
                     </li>
                   <a class="nav-link" href="/funny/">Funny</a>
                   <a class="nav-link" href="/learning/">Learning</a>
+                   <a class="nav-link" href="/admin/">Admin</a>
                   </li>
                   </li>
                   </li>
                   <a class="nav-link" href="/summer/">Summer</a>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link" id="load-default-data">Load</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/inventions/">Inventions</a>
+                    </li>
+
+                  </li>
+
                   </li>
                   
             </div>
@@ -64,6 +73,28 @@
         {% endif %}
     </div>
   </footer>
+
+  <!-- JavaScript for the default data link -->
+    <script>
+        document.getElementById('load-default-data').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (confirm('Are you sure you want to load default data? This will delete all existing data.')) {
+                fetch('/load/')  // URL to trigger the view for loading default data
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status == 'success') {
+                      alert('Default data successfully loaded!');
+                    } else {
+                      alert('Failed to load default data.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error loading default data.');
+                });
+            }
+        });
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

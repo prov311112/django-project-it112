@@ -4,8 +4,12 @@ from django.views import View
 from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-
-
+from django.http import JsonResponse
+from .default_data import load_default_data
+from django.views.generic import ListView
+from django.urls import reverse_lazy
+from .models import Invention
+from django.views.generic import DetailView
 
 from django.http import HttpResponse
 
@@ -116,3 +120,24 @@ class LearningView(BaseView):
       response = HttpResponseRedirect(reverse('learning'))
       response.set_cookie('learning', learning)
       return response
+
+
+
+
+
+def load_default_data_view(request):
+    load_default_data()  # Call the load_default_data function
+    return JsonResponse({'status': 'success'})
+
+
+class InventionListView(ListView):
+    model = Invention
+    template_name = 'invention_list.html'
+    context_object_name = 'inventions'
+
+
+
+class InventionDetailView(DetailView):
+    model = Invention
+    template_name = 'invention_view.html'
+    context_object_name = 'invention'
